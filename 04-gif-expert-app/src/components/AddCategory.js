@@ -9,11 +9,11 @@ export const AddCategory = ({ setCategories }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (inputValue) {
-      setCategories((cat) => [...cat, inputValue]);
-      setInputValue('')
+      setCategories((cat) => [inputValue, ...cat]);
+      setInputValue("");
       console.log("submit hecho", inputValue);
     } else {
-        setInputValue('')
+      setInputValue("");
       console.warn("Ingresa un dato");
     }
   };

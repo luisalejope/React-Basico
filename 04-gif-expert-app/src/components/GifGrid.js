@@ -1,43 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import GifGridItem from "./GifGridItem";
+import { useFetchGifs } from "../hooks/useFetchGifs";
+// import GifGridItem from "./GifGridItem";
+// import { getGifs } from "../helpers/getGifs";
 
 const GifGrid = ({ category }) => {
-  const [images, setImages] = useState([]);
-
-  useEffect(() => {
-    getGifs();
-  }, []);
-  const getGifs = async () => {
-    const url =
-      "https://api.giphy.com/v1/gifs/search?q=Rick+and+Morty&limit=10&api_key=3943VVjWEmLud8vl7BGHO9MqeG33ZGe9";
-    const resp = await fetch(url);
-    const { data } = await resp.json();
-    const gifs = data.map((img) => {
-      return {
-        id: img.id,
-        title: img.title,
-        url: img.images.downsized_medium.url,
-      };
-    });
-    console.log(gifs);
-    setImages(gifs);
-  };
+  // const [images, setImages] = useState([]);
+  const {loading} = useFetchGifs();
+  /* useEffect(() => {
+    getGifs(category)
+        .then(setImages);
+  }, [category]); */
 
   return (
     <>
       <h3>{category}</h3>
-      
-        {images.map(img => (
-            <GifGridItem key={img.id} {...img}/>
+        {loading ? 'Cargando...' : 'Data cargada'}
+      {/* <div className="card-grid">
+        {images.map((img) => (
+          <GifGridItem key={img.id} {...img} />
         ))}
-      
+      </div> */}
     </>
   );
 };
 
 GifGrid.propTypes = {
-    category: PropTypes.string.isRequired
+  category: PropTypes.string.isRequired,
 };
 
 export default GifGrid;
