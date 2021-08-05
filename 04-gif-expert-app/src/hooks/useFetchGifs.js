@@ -8,12 +8,13 @@ export const useFetchGifs = (category) => {
   });
 
   useEffect(() => {
-    getGifs(category).then((img) => {
-      setTimeout(() => {
-        setState({ data: img, loading: false });
-      }, 3000);
-    });
+    fetch(category);
   }, [category]);
+
+  const fetch = async (cat) => {
+    const img = await getGifs(cat);
+    setState({ data: img, loading: false });
+  };
 
   return state; // {data:[], loading: true}
 };

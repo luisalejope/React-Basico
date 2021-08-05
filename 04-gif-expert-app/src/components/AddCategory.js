@@ -20,8 +20,8 @@ export const AddCategory = ({ setCategories }) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <input type="text" value={inputValue} onChange={handleInputChange} />
+      <form className="" onSubmit={handleSubmit}>
+        <input type="text" value={inputValue} onChange={handleInputChange} placeholder={"Buscar Gif"} />
       </form>
     </>
   );

@@ -12,7 +12,7 @@ console.log( nombreCompleto );
 
 
 export function getSaludo(nombre = 'Carlos') {
-    return 'Hola ' + nombre;
+    return 'Hola ' + nombre ;
 }
 
 console.log( `Este es un texto: ${ getSaludo( nombre ) }  ` );
