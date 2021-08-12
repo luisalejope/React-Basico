@@ -11,10 +11,8 @@ export const AddCategory = ({ setCategories }) => {
     if (inputValue) {
       setCategories((cat) => [inputValue, ...cat]);
       setInputValue("");
-      console.log("submit hecho", inputValue);
     } else {
       setInputValue("");
-      console.warn("Ingresa un dato");
     }
   };
 
