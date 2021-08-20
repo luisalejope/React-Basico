@@ -29,5 +29,9 @@ describe("Pruebas en <GifGrid />", () => {
     });
     const wrapper = shallow(<GifGrid category={category} />);
     expect(wrapper).toMatchSnapshot()
+    // revisa si no existe el loader
+    expect(wrapper.find('p').exists()).toBe(false)
+    // revisa si existen la misma cantidad de componentes
+    expect(wrapper.find('GifGridItem').length).toBe(gifs.length)
   });
 });
