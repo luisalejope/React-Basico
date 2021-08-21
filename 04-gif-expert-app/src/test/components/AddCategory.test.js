@@ -15,6 +15,7 @@ describe("Pruebas en <AddCategory />", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  //testear un cambio en el input
   test("debe de cambiar la caja de texto", () => {
     const input = wrapper.find("input");
     const value = "Hola mundo";
