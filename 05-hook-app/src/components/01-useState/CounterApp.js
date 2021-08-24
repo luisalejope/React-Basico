@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./counter.css";
+import "../styles/main.css";
 export const CounterApp = () => {
   const [initialState, setInitial] = useState({
       counter1: 10,

@@ -1,0 +1,13 @@
+body {
+    padding: 70px;
+}
+
+.containerButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.blockquote {
+    display: flex;
+}
