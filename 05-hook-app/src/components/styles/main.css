@@ -11,3 +11,45 @@ body {
 .blockquote {
     display: flex;
 }
+
+.todosMain {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.agregarColumn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45%;
+}
+
+.agregarForm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo {
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.todosFlex {
+    width: 45%;
+    display: flex;
+}
+
+.simpleFlex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fullWidth {
+    width: 100%;
+}
