@@ -1,9 +1,40 @@
-import React from 'react'
+import React from "react";
+import { Redirect, useParams } from "react-router-dom";
+import { HeroDetails } from "../../components/heroes/HeroDetails";
+import { getHeroesById } from "../../selectors/getHeroById";
+import "./styles/HeroScreen.css";
+export const HeroScreen = ({history}) => {
+  const { heroeId } = useParams();
 
-export const HeroScreen = () => {
-    return (
+  const hero = getHeroesById(heroeId);
+
+  if (!hero) {
+    return <Redirect to="/" />;
+  }
+
+  const handleReturn = () => {
+    history.goBack();
+  };
+
+  return (
+    <div className="heroContainer">
+      <div className="headerContainer">
+        <button className="btn btn-outline-primary" onClick={handleReturn}>
+        ← Return
+        </button>
+        <h1>{hero.superhero}</h1>
+      </div>
+      <div className="heroGrid">
         <div>
-            <h1>HeroScreen</h1>
+          <img
+            src={`../assets/heroes/${heroeId}.jpg`}
+            alt={hero.superhero}
+            className="img-thumbnail"
+          />
         </div>
-    )
-}
+
+        <HeroDetails hero={hero} />
+      </div>
+    </div>
+  );
+};

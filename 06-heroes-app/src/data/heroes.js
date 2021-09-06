@@ -5,7 +5,8 @@ export const heroes = [
         'publisher':'DC Comics', 
         'alter_ego':'Bruce Wayne',
         'first_appearance':'Detective Comics #27',
-        'characters':'Bruce Wayne'
+        'characters':'Bruce Wayne',
+        'trailer': 'YNl8yV8oPZM'
     },
     {
         'id': 'dc-superman',
@@ -13,7 +14,8 @@ export const heroes = [
         'publisher':'DC Comics', 
         'alter_ego':'Kal-El',
         'first_appearance':'Action Comics #1',
-        'characters':'Kal-El'
+        'characters':'Kal-El',
+        'trailer': 'T6DJcgm3wNY'
     },
     {
         'id': 'dc-flash',
@@ -21,7 +23,8 @@ export const heroes = [
         'publisher':'DC Comics', 
         'alter_ego':'Jay Garrick',
         'first_appearance':'Flash Comics #1',
-        'characters':'Jay Garrick, Barry Allen, Wally West, Bart Allen'
+        'characters':'Jay Garrick, Barry Allen, Wally West, Bart Allen',
+        'trailer': 'Yj0l7iGKh8g'
     },
     {
         'id': 'dc-green',
@@ -29,7 +32,8 @@ export const heroes = [
         'publisher':'DC Comics', 
         'alter_ego':'Alan Scott',
         'first_appearance':'All-American Comics #16',
-        'characters':'Alan Scott, Hal Jordan, Guy Gardner, John Stewart, Kyle Raynor, Jade, Sinestro, Simon Baz'
+        'characters':'Alan Scott, Hal Jordan, Guy Gardner, John Stewart, Kyle Raynor, Jade, Sinestro, Simon Baz',
+        'trailer': 'L3gs-79p1xM'
     },
     {
         'id': 'dc-arrow',
@@ -37,7 +41,8 @@ export const heroes = [
         'publisher':'DC Comics', 
         'alter_ego':'Oliver Queen',
         'first_appearance':'More Fun Comics #73',
-        'characters':'Oliver Queen'
+        'characters':'Oliver Queen',
+        'trailer': 'uFdqDMxlx88'
     },
     {
         'id': 'dc-wonder',
@@ -45,7 +50,8 @@ export const heroes = [
         'publisher':'DC Comics', 
         'alter_ego':'Princess Diana',
         'first_appearance':'All Star Comics #8',
-        'characters':'Princess Diana'
+        'characters':'Princess Diana',
+        'trailer': 'sfM7_JLk-84'
     },
     {
         'id': 'dc-martian',
@@ -53,7 +59,8 @@ export const heroes = [
         'publisher':'DC Comics', 
         'alter_ego':'J\'onn J\'onzz',
         'first_appearance':'Detective Comics #225',
-        'characters':'Martian Manhunter'
+        'characters':'Martian Manhunter',
+        'trailer': '2jrTYwN6ero'
     },
     {
         'id': 'dc-robin',
@@ -61,7 +68,8 @@ export const heroes = [
         'publisher':'DC Comics', 
         'alter_ego':'Dick Grayson',
         'first_appearance':'Detective Comics #38',
-        'characters':'Dick Grayson'
+        'characters':'Dick Grayson',
+        'trailer': '-7WcrhxKce8'
     },
     {
         'id': 'dc-blue',
@@ -69,7 +77,8 @@ export const heroes = [
         'publisher':'DC Comics', 
         'alter_ego':'Dan Garret',
         'first_appearance':'Mystery Men Comics #1',
-        'characters':'Dan Garret, Ted Kord, Jaime Reyes'
+        'characters':'Dan Garret, Ted Kord, Jaime Reyes',
+        'trailer': '4_brwpONc9E'
     },
     {
         'id': 'dc-black',
@@ -77,7 +86,8 @@ export const heroes = [
         'publisher':'DC Comics', 
         'alter_ego':'Dinah Drake',
         'first_appearance':'Flash Comics #86',
-        'characters':'Dinah Drake, Dinah Lance'
+        'characters':'Dinah Drake, Dinah Lance',
+        'trailer': 'npynojF0PO4'
     },
     {
         'id': 'marvel-spider',
@@ -85,7 +95,8 @@ export const heroes = [
         'publisher':'Marvel Comics', 
         'alter_ego':'Peter Parker',
         'first_appearance':'Amazing Fantasy #15',
-        'characters':'Peter Parker'
+        'characters':'Peter Parker',
+        'trailer': '6QkTCmhOzuA'
     },
     {
         'id': 'marvel-captain',
@@ -93,7 +104,8 @@ export const heroes = [
         'publisher':'Marvel Comics', 
         'alter_ego':'Steve Rogers',
         'first_appearance':'Captain America Comics #1',
-        'characters':'Steve Rogers'
+        'characters':'Steve Rogers',
+        'trailer': 'dKrVegVI0Us'
     },
     {
         'id': 'marvel-iron',
@@ -101,7 +113,8 @@ export const heroes = [
         'publisher':'Marvel Comics', 
         'alter_ego':'Tony Stark',
         'first_appearance':'Tales of Suspense #39',
-        'characters':'Tony Stark'
+        'characters':'Tony Stark',
+        'trailer': 'bKWvs_yCT6c'
     },
     {
         'id': 'marvel-thor',
@@ -109,7 +122,8 @@ export const heroes = [
         'publisher':'Marvel Comics', 
         'alter_ego':'Thor Odinson',
         'first_appearance':'Journey into Myster #83',
-        'characters':'Thor Odinson'
+        'characters':'Thor Odinson',
+        'trailer': 'YNl8yV8oPZM'
     },
     {
         'id': 'marvel-hulk',
@@ -117,7 +131,8 @@ export const heroes = [
         'publisher':'Marvel Comics', 
         'alter_ego':'Bruce Banner',
         'first_appearance':'The Incredible Hulk #1',
-        'characters':'Bruce Banner'
+        'characters':'Bruce Banner',
+        'trailer': 'xbqNb2PFKKA'
     },
     {
         'id': 'marvel-wolverine',
@@ -125,7 +140,8 @@ export const heroes = [
         'publisher':'Marvel Comics', 
         'alter_ego':'James Howlett',
         'first_appearance':'The Incredible Hulk #180',
-        'characters':'James Howlett'
+        'characters':'James Howlett',
+        'trailer': 'Div0iP65aZo'
     },
     {
         'id': 'marvel-daredevil',
@@ -133,7 +149,8 @@ export const heroes = [
         'publisher':'Marvel Comics', 
         'alter_ego':'Matthew Michael Murdock',
         'first_appearance':'Daredevil #1',
-        'characters':'Matthew Michael Murdock'
+        'characters':'Matthew Michael Murdock',
+        'trailer': 'jAy6NJ_D5vU'
     },
     {
         'id': 'marvel-hawkeye',
@@ -141,7 +158,8 @@ export const heroes = [
         'publisher':'Marvel Comics', 
         'alter_ego':'Clinton Francis Barton',
         'first_appearance':'Tales of Suspense #57',
-        'characters':'Clinton Francis Barton'
+        'characters':'Clinton Francis Barton',
+        'trailer': 'i004l5TeToU'
     },
     {
         'id': 'marvel-cyclops',
@@ -149,7 +167,8 @@ export const heroes = [
         'publisher':'Marvel Comics', 
         'alter_ego':'Scott Summers',
         'first_appearance':'X-Men #1',
-        'characters':'Scott Summers'
+        'characters':'Scott Summers',
+        'trailer': 'm-J3nxYCsEk'
     },
     {
         'id': 'marvel-silver',
@@ -157,6 +176,7 @@ export const heroes = [
         'publisher':'Marvel Comics', 
         'alter_ego':'Norrin Radd',
         'first_appearance':'The Fantastic Four #48',
-        'characters':'Norrin Radd'
+        'characters':'Norrin Radd',
+        'trailer': '6pyNEJAiNCU'
     }
 ]

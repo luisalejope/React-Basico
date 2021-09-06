@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/HeroCard.css";
+import { Link } from "react-router-dom";
 
 export const HeroCard = ({
   id,
@@ -11,19 +12,6 @@ export const HeroCard = ({
 }) => {
   return (
     <>
-      {/* <div className="heroCard">
-        <div className="rowCard">
-          <img
-            src={`./assets/heroes/${id}.jpg`}
-            className="card-img"
-            alt={superhero}
-          />
-        </div>
-        <div className="rowCard">
-          <h5>{superhero}</h5>
-          <p>{alter_ego}</p>
-        </div>
-      </div> */}
       <div className="flip-card">
         <div className="flip-card-inner">
           <div className="flip-card-front">
@@ -36,6 +24,11 @@ export const HeroCard = ({
           <div className="flip-card-back">
             <h5>{superhero}</h5>
             <p>{alter_ego}</p>
+            {alter_ego !== characters && <p>{characters}</p>}
+            <p>
+              <small>{first_appearance}</small>
+            </p>
+            <Link to={`./hero/${id}`}>mas...</Link>
           </div>
         </div>
       </div>
