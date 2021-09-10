@@ -1,0 +1,17 @@
+.searchContainer {
+    display: grid;
+    grid-template-columns: 80% 15%;
+    gap: 5%;
+}
+
+.gridCards{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+}
+
+.layoutSearch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

@@ -1,26 +1,29 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Redirect, useParams } from "react-router-dom";
 import { HeroDetails } from "../../components/heroes/HeroDetails";
 import { getHeroesById } from "../../selectors/getHeroById";
 import "./styles/HeroScreen.css";
-export const HeroScreen = ({history}) => {
+export const HeroScreen = ({ history }) => {
   const { heroeId } = useParams();
 
-  const hero = getHeroesById(heroeId);
-
+  const hero = useMemo(() => getHeroesById(heroeId), [heroeId])
   if (!hero) {
     return <Redirect to="/" />;
   }
 
   const handleReturn = () => {
-    history.goBack();
+    if (history.length <= 2) {
+      history.push("/");
+    } else {
+      history.goBack();
+    }
   };
 
   return (
-    <div className="heroContainer">
+    <div className="heroContainer animate__animated animate__fadeIn">
       <div className="headerContainer">
         <button className="btn btn-outline-primary" onClick={handleReturn}>
-        ← Return
+          ← Return
         </button>
         <h1>{hero.superhero}</h1>
       </div>

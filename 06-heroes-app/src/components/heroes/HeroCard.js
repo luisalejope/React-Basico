@@ -28,7 +28,7 @@ export const HeroCard = ({
             <p>
               <small>{first_appearance}</small>
             </p>
-            <Link to={`./hero/${id}`}>mas...</Link>
+            <Link to={`./hero/${id}`}>Details...</Link>
           </div>
         </div>
       </div>
