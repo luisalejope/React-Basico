@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import queryString from "query-string";
 import { useLocation } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
@@ -9,7 +9,7 @@ export const SearchScreen = ({ history }) => {
   const location = useLocation();
   const { q = "" } = queryString.parse(location.search);
 
-  const [values, handleInputChange, reset] = useForm({
+  const [values, handleInputChange ] = useForm({
     hero: q,
   });
 
