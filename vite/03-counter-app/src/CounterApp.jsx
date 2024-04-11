@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import PropTypes from 'prop-types'
 
 export const CounterApp = ({ value }) => {
@@ -8,7 +8,11 @@ export const CounterApp = ({ value }) => {
     const handleAdd = () => setCounter(counter + 1)
     
 
-    const handleSubstract = () => setCounter(counter - 1)
+    const handleSubstract = () => {
+        if (counter > 0) {
+            setCounter(counter - 1)
+        }
+    }
 
     const handleReset = () => setCounter(value)
 
@@ -24,5 +28,5 @@ export const CounterApp = ({ value }) => {
 }
 
 CounterApp.propTypes = {
-    value: PropTypes.number
+    value: PropTypes.number.isRequired
 }
