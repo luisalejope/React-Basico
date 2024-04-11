@@ -7,7 +7,7 @@ export const getImagen = async() => {
 
     try {
 
-        const apiKey = '3943VVjWEmLud8vl7BGHO9MqeG33ZGe9';
+        const apiKey = '4hJUgNoRRsiqFKOAr3qnnLRzwwkh0dZM';
         const resp   = await fetch(`http://api.giphy.com/v1/gifs/random?api_key=${ apiKey }`);
         const { data } = await resp.json(); 
 
