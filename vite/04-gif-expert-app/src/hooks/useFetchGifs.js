@@ -12,7 +12,6 @@ export const useFetchGifs = (category) => {
             setIsLoading(true)
             const res = await getGifs(category)
             setGifs(res)
-            console.log(res)
         } catch (error) {
             console.error(error)
         } finally {
