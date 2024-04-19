@@ -15,7 +15,8 @@ export const NavBar = () => {
                             to="/">
                             Home
                         </NavLink>
-
+                        
+                        <p>Hola mundo</p>
 
                         <NavLink
                             className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}

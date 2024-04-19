@@ -6,6 +6,8 @@ import './index.css'
 import { RouterProvider } from 'react-router-dom';
 import { getRoutes } from './09-useContext/Routes';
 
+
+
 const router = getRoutes()
 
 ReactDOM.createRoot(document.getElementById('root')).render(
