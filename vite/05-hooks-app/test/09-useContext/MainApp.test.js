@@ -50,8 +50,8 @@ describe('Pruebas en <MainApp />', () => {
         render(<RouterProvider router={router} />);
  
         //ubicando elemento h1
-        const head = screen.getByRole('heading',{name: 'LoginPage'});
+        const head = screen.getByRole('heading',{name: 'LoginPage'}).innerHTML;
  
-        expect(head).toBeTruthy();
+        expect(head).toContain('LoginPage');
     })
 });
