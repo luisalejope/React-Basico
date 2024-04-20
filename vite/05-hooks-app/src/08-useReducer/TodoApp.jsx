@@ -9,7 +9,7 @@ export const TodoApp = () => {
 
     return (
         <>
-            <h1>Todo App: {totalTodos}, <small>Pendientes: {pendingTodos}</small></h1>
+            <h1>Todo App: #{totalTodos}, <small>Pendientes: #{pendingTodos}</small></h1>
             <hr />
 
             <div className="row">
