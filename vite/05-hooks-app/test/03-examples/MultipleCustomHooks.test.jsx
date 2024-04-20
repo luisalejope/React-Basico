@@ -1,4 +1,4 @@
-import { fireEvent, render, renderHook, screen } from "@testing-library/react"
+import { fireEvent, render, screen } from "@testing-library/react"
 import { MultipleCustomHook } from "../../src/03-examples/MultipleCustomHook"
 import { useFetch } from "../../src/hooks/useFetch";
 import { useCounter } from "../../src/hooks/useCounter";
