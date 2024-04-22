@@ -5,6 +5,6 @@ import { JournalApp } from './JournalApp.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <JournalApp/>
+    <JournalApp />
   </React.StrictMode>,
 )
