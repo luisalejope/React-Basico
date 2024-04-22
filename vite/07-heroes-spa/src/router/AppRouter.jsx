@@ -32,9 +32,13 @@ export const AppRouter = () => {
                     element: <DcPage />,
                 },
                 {
-                    path: "hero",
+                    path: "dc/hero/:heroId",
                     element: <HeroPage />,
-                },   
+                },
+                {
+                    path: "marvel/hero/:heroId",
+                    element: <HeroPage />,
+                }, 
                 {
                     path: "search",
                     element: <SearchPage />,

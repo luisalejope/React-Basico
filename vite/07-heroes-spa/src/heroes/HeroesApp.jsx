@@ -4,8 +4,9 @@ export const HeroesApp = () => {
   return (
     <>
         <Navbar />
-        <h1>Heroes App</h1>
-        <Outlet />
+        <div className="container mt-3">
+          <Outlet />
+        </div>
     </>
   )
 }
