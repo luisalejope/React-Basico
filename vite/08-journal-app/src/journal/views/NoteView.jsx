@@ -1,9 +1,31 @@
 import { SaveOutlined } from "@mui/icons-material";
 import { Button, Grid, TextField, Typography } from "@mui/material";
-import PropTypes from "prop-types";
 import { ImageGallery } from "../components";
+import { useDispatch, useSelector } from "react-redux";
+import { useForm } from "../../hooks";
+import { useEffect, useMemo } from "react";
+import { setActiveNote } from "../../store/journal/journalSlice";
+import { startSaveNote } from "../../store/journal/thunks";
 
 export const NoteView = () => {
+    const dispatch = useDispatch()
+    const {active: note} = useSelector(state => state.journal);
+
+    const {title, body, date, onInputChange, formState} = useForm(note);
+
+    useEffect(() => {
+        dispatch(setActiveNote(formState))
+    }, [formState])
+
+    const dateString = useMemo(() => {
+        const newDate = new Date(date);
+        return newDate.toUTCString()
+    }, [date])
+
+    const onSaveNote = () => {
+        dispatch(startSaveNote())
+    }
+
     return (
         <Grid
             container
@@ -14,11 +36,11 @@ export const NoteView = () => {
         >
             <Grid item>
                 <Typography fontSize={39} fontWeight="ligth">
-                    28 de agosto, 2023
+                    {dateString}
                 </Typography>
             </Grid>
             <Grid item>
-                <Button color="primary" sx={{ padding: 2 }}>
+                <Button color="primary" sx={{ padding: 2 }} onClick={onSaveNote}>
                     <SaveOutlined sx={{ fontSize: 30, mr: 1 }} />
                     Save
                 </Button>
@@ -29,6 +51,9 @@ export const NoteView = () => {
                     type="text"
                     variant="filled"
                     fullWidth
+                    name="title"
+                    value={title}
+                    onChange={onInputChange}
                     placeholder="Write a title"
                     label="Title"
                     sx={{ border: "none", mb: 1 }}
@@ -38,6 +63,9 @@ export const NoteView = () => {
                     variant="filled"
                     fullWidth
                     multiline
+                    name="body"
+                    value={body}
+                    onChange={onInputChange}
                     placeholder="What happened today?"
                     minRows={5}
                 />

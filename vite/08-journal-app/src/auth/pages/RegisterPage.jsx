@@ -1,6 +1,6 @@
 import { Link as RouterLink } from "react-router-dom";
 import { AuthLayout } from "../layout";
-import { Button, Grid, Link, TextField, Typography } from "@mui/material";
+import { Alert, Button, Grid, Link, TextField, Typography } from "@mui/material";
 import { useForm } from "../../hooks";
 import { useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -27,7 +27,7 @@ export const RegisterPage = () => {
   const isCheckingAuthentication = useMemo(() => status === 'checking', [status])
 
   const {
-    formState, name, email, password, onInputChange,
+    name, email, password, onInputChange,
     isFormValid, nameValid, emailValid, passwordValid,
   } = useForm(formData, formValidations);
 
@@ -86,7 +86,7 @@ export const RegisterPage = () => {
           </Grid>
 
           <Grid container spacing={2} sx={{ mb: 2, mt: 1 }}>
-            <Grid item xs={12} display={!!errorMessage ? '' : 'none'}>
+            <Grid item xs={12} display={errorMessage ? '' : 'none'}>
               <Alert severity="error">{errorMessage}</Alert>
             </Grid>
             <Grid item xs={12}>
