@@ -24,8 +24,13 @@ export const SideBar = ({ drawerWidth }) => {
                 variant="permanent"
                 open
                 sx={{
-                    display: { xs: "block" },
-                    "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth },
+                    width: drawerWidth,
+                    flexShrink: 0,
+                    "& .MuiDrawer-paper": { 
+                        boxSizing: "border-box",
+                        width: drawerWidth,
+                        zIndex: 1000 
+                    },
                 }}
             >
                 <Toolbar>

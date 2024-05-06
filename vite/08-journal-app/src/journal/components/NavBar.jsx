@@ -1,15 +1,16 @@
 import { LogoutOutlined, MenuOutlined } from "@mui/icons-material";
 import { AppBar, Grid, IconButton, Toolbar, Typography } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
-import { logoutFirebase } from "../../firebase/providers";
 import { startLogoutFromFirebase } from "../../store/auth";
+import { restoreJournalState } from "../../store/journal";
 
 export const NavBar = ({ drawerWidth = 240 }) => {
 
     const dispatch = useDispatch()
 
     const onLogout = () => {
+        dispatch(restoreJournalState())
         dispatch(startLogoutFromFirebase())
     }
 
