@@ -14,7 +14,6 @@ export const JournalLayout = ({ children }) => {
     if (messageSaved.length > 0) {
       Swal.fire('Nota Actualizada', messageSaved, 'success')
     }
-    console.log('holaaaaaa')
   }, [messageSaved])
 
   return (
