@@ -5,7 +5,7 @@ import { AuthChildrenRoutes } from "../auth";
 
 
 export const AppRouter = () => {
-    const status = "not-authenticated";
+    const status = "authenticated"; //not-authenticated authenticated
     const router = createBrowserRouter([
       {
         path: "/auth/*",
